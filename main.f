@@ -45,7 +45,7 @@ c      CHARACTER*7 cNV(50)
       READ(20,shape)
       READ(20,change)
 
-      OPEN(21,FILE='..\DATA.IN\'//'i'//cNV//'.dat')
+      OPEN(21,FILE='DATA.IN\'//'i'//cNV//'.dat')
 
       WRITE(21,solo)
       WRITE(21,correct)
@@ -55,8 +55,8 @@ c      CHARACTER*7 cNV(50)
 
       WRITE(cSER0,'(i2.2)') n_SER0   ! ïåðåâîä öåëîãî â òåêñò
 
-      OPEN(35,FILE='..\DATA.DAT\'//'g'//cNV//'-'//cSER0//'.dat')
-      OPEN(45,FILE='..\DATA.OUT\'//'o'//cNV//'.dat')
+      OPEN(35,FILE='DATA.DAT\'//'g'//cNV//'-'//cSER0//'.dat')
+      OPEN(45,FILE='DATA.OUT\'//'o'//cNV//'.dat')
 
       WRITE(*,3) cNV
 
@@ -431,7 +431,7 @@ c      CHARACTER*7 cNV(50)
         WRITE(cSer,'(i2.2)') n_Ser   ! ïåðåâîä öåëîãî â òåêñò
 
         CLOSE(35)
-        OPEN(35,FILE='..\DATA.DAT\'//'g'//cNV//'-'//cSER//'.dat')
+        OPEN(35,FILE='DATA.DAT\'//'g'//cNV//'-'//cSER//'.dat')
 
          fil0=cNV//'-'//cSer0
          fil=cNV//'-'//cSer
